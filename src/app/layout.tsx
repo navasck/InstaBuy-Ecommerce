@@ -4,6 +4,7 @@ import "@/assets/styles/globals.css";
 import { APP_NAME, SERVER_URL } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from 'next-themes';
 
 
 export const metadata: Metadata = {
@@ -21,11 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en' suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='light'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
