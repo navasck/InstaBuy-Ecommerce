@@ -2,7 +2,7 @@
 https://github.com/bradtraversy/prostore
 https://ui.shadcn.com/
 
-npx shadcn@latest init
+        npx shadcn@latest init
 
 in React 19 -      Use --legacy-peer-deps
 
@@ -37,6 +37,10 @@ install Prisma vscode extension
 pgAdmin : it's a free, open-source, graphical management tool designed for managing PostgreSQL databases, providing a user-friendly interface for creating, maintaining, and using database objects, as well as executing SQL queries.
 
      npx prisma studio ( Prisma Studio will run on http://localhost:5555/ )
+     npx tsx ./src/db/seed   (to seed database)
+
+Server Actions : Asynchrous functions that are exicuted on the server.
+
 
 
 
